@@ -1,0 +1,15 @@
+#WAVEFORM
+#H Name     IDE-RTC;
+#H PartNo   01;
+#H Date     9/18/2019;
+#H Revision 01;
+#H Designer KM;
+#H Company  Analogue Technologies;
+#H Assembly SBC2;
+#H Location ;
+#H Device   g16v8ms;
+#H 
+#H 
+#F ADDRESS = [A4,A3,A2,A1,A0];
+
+#H ORDER: A0, A1, A2, A3, A4, !SEL, !MRD, !MWR, CLK, !CS0, !CS1, !UBRE, UBRL, !UBWE, UBWL, !OC, !HBT, !TOD;

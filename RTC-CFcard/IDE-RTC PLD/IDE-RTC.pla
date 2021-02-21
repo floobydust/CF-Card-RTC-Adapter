@@ -1,0 +1,35 @@
+# Berkeley PLA format generated using
+#
+# CUPL(WM)        5.0a Serial# 60008009
+# Device          g16v8s  Library DLIB-h-40-9
+# Created         Sat Jan 04 08:11:22 2020
+# Name            IDE-RTC 
+# Partno          01 
+# Revision        01 
+# Date            9/18/2019 
+# Designer        KM 
+# Company         Analogue Technologies 
+# Assembly        SBC2 
+# Location        
+#
+# Inputs  A0 A1 A2 A3 
+#         A4 CLK !CS0 !CS1 
+#         !HBT !MRD !MWR !OC 
+#         !RTC !SEL !UBRE UBRL 
+#         !UBWE UBWL 
+# Outputs !CS0 !CS1 !HBT RTC 
+#         !UBRE UBRL !UBWE UBWL 
+.i 18
+.o 8
+.p 10
+---11--------1---- 1~~~~~~~
+-1101--------1---- ~1~~~~~~
+-0101--------1---- ~~1~~~~~
+-------------0---- ~~~1~~~~
+--1-1------------- ~~~1~~~~
+---11------------- ~~~1~~~~
+00101----1---1---- ~~~~1~~~
+00011----1---1---- ~~~~~1~~
+00011-----1--1---- ~~~~~~1~
+10101-----1--1---- ~~~~~~~1
+.end

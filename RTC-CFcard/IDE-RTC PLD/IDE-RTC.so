@@ -1,0 +1,22 @@
+CSIM(WM): CUPL Simulation Program
+Version 5.0a Serial# 
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+CREATED Sat Jan 04 08:13:06 2020
+
+LISTING FOR SIMULATION FILE: IDE-RTC.si
+
+   1: Name     IDE-RTC;
+   2: PartNo   01;
+   3: Date     9/18/2019;
+   4: Revision 01;
+   5: Designer KM;
+   6: Company  Analogue Technologies;
+   7: Assembly SBC2;
+   8: Location ;
+   9: Device   g16v8ms;
+  10: 
+  11: 
+  12: FIELD ADDRESS = [A4,A3,A2,A1,A0];
+  13:
+  14: ORDER: A0, A1, A2, A3, A4, !SEL, !MRD, !MWR, CLK, !CS0, !CS1, !UBRE, UBRL, !UBWE, UBWL, !OC, !HBT, !TOD;
+[0011sa] unknown symbol:  TOD

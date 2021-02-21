@@ -1,0 +1,53 @@
+%SIGNAL
+PIN   2 =  A0 
+PIN   3 =  A1 
+PIN   4 =  A2 
+PIN   5 =  A3 
+PIN   6 =  A4 
+PIN   1 =  CLK 
+PIN  16 = !CS0 
+PIN  17 = !CS1 
+PIN  19 = !HBT 
+PIN   7 = !MRD 
+PIN   8 = !MWR 
+PIN  11 = !OC 
+PIN  18 = !RTC 
+PIN   9 = !SEL 
+PIN  13 = !UBRE 
+PIN  15 =  UBRL 
+PIN  12 = !UBWE 
+PIN  14 =  UBWL 
+%END
+
+%FIELD
+FIELD ADDRESS = A4,A3,A2,A1,A0
+%END
+
+%EQUATION
+CS0 =>
+    A3 & A4 & !SEL
+
+CS1 =>
+    A1 & A2 & !A3 & A4 & !SEL
+
+HBT =>
+    !A1 & A2 & !A3 & A4 & !SEL
+
+RTC =>
+    SEL
+  # A2 & A4
+  # A3 & A4
+
+UBRE =>
+    !A0 & !A1 & A2 & !A3 & A4 & !MRD & !SEL
+
+UBRL =>
+    !A0 & !A1 & !A2 & A3 & A4 & !MRD & !SEL
+
+UBWE =>
+    !A0 & !A1 & !A2 & A3 & A4 & !MWR & !SEL
+
+UBWL =>
+    A0 & !A1 & A2 & !A3 & A4 & !MWR & !SEL
+
+%END

@@ -1,0 +1,46 @@
+Name     IDE-RTC ;
+PartNo   01 ;
+Date     9/18/2019 ;
+Revision 01 ;
+Designer KM ;
+Company  Analogue Technologies ;
+Assembly SBC2 ;
+Location  ;
+Device   g16v8 ;
+
+/* *************** INPUT PINS *********************/
+PIN 1    = CLK                       ; /*                                 */
+PIN 2    = A0                        ; /*                                 */
+PIN 3    = A1                        ; /*                                 */
+PIN 4    = A2                        ; /*                                 */
+PIN 5    = A3                        ; /*                                 */
+PIN 6    = A4                        ; /*                                 */
+PIN 7    = !MRD                      ; /*                                 */
+PIN 8    = !MWR                      ; /*                                 */
+PIN 9    = !SEL                      ; /*                                 */
+PIN 11   = !OC                       ; /*                                 */
+
+/* *************** OUTPUT PINS *********************/
+PIN 12   = !UBWE                     ; /*                                 */
+PIN 13   = !UBRE                     ; /*                                 */
+PIN 14   = UBWL                      ; /*                                 */
+PIN 15   = UBRL                      ; /*                                 */
+PIN 16   = !CS0                      ; /*                                 */
+PIN 17   = !CS1                      ; /*                                 */
+PIN 18   = !RTC                      ; /*                                 */
+PIN 19   = !HBT                      ; /*                                 */
+
+/** Declarations and Intermediate Variables Definitions **/
+FIELD ADDRESS = [A4..0];
+
+!RTC = SEL & ADDRESS:['h'00..13];
+HBT = SEL & ADDRESS:['h'14..15];
+CS1 = SEL & ADDRESS:['h'16..17];
+CS0 = SEL & ADDRESS:['h'18..1F];
+
+/** Logic Equations **/
+
+UBWE = MWR & SEL & ADDRESS:['h'18..18];
+UBRE = MRD & SEL & ADDRESS:['h'14..14];
+UBWL = MWR & SEL & ADDRESS:['h'15..15];
+UBRL = MRD & SEL & ADDRESS:['h'18..18];
